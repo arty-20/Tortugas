@@ -10,24 +10,28 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        metodo();
     }
     fun radioButtonClick(view:View){
-        if (view == radioLeo){
+
+        metodo();
+    }
+    fun metodo(){
+        if (radioLeo.isChecked==true){
             tortuga.setImageResource(R.drawable.tmntleo);
         }else{
-            if (view == radioDon){
+            if (radioDon.isChecked==true){
                 tortuga.setImageResource(R.drawable.tmntdon);
             }else{
-                if (view == radioMiguel){
+                if (radioMiguel.isChecked==true){
                     tortuga.setImageResource(R.drawable.tmntmike);
                 }else{
-                    if (view == radioRafa){
+                    if (radioRafa.isChecked==true){
                         tortuga.setImageResource(R.drawable.tmntraph);
                     }
                 }
             }
         }
     }
-
 
 }
